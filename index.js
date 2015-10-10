@@ -22,6 +22,10 @@ Client.connect(mongodbUri.format(config), {'uri_decode_auth': true}, function(er
 var continuacion =  function (db){
     var collection = db.collection('articulos');
     collection.insert({a: 1}, function(err, result) {
+        if (err) {
+            console.log(err);
+            return;
+        }
 
         console.log('OK');
         db.close();
