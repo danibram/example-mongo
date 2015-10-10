@@ -1,0 +1,22 @@
+{
+  "name": "Example",
+  "version": "0.0.1",
+  "description": "",
+  "homepage": "",
+  "repository": {
+  },
+  "bugs": {
+  },
+  "licenses": [
+  ],
+  "main": "index.js",
+  "dependencies": {
+    "mongodb": "^2.0.14",
+    "mongodb-uri": "^0.9.7"
+  },
+  "devDependencies": {},
+  "author": {
+  },
+  "keywords": [
+  ]
+}
