@@ -21,14 +21,26 @@ Client.connect(mongodbUri.format(config), {'uri_decode_auth': true}, function(er
 
 var continuacion =  function (db){
     var collection = db.collection('articulos');
-    collection.insert({a: 1}, function(err, result) {
+    /*for (var i = 0; i < 100; i++) {
+        console.log('try insert ' + i);
+        collection.insert({a: i}, function(err, result) {
+            if (err) {
+                console.log(err);
+                return;
+            }
+
+            console.log('OK ' + i);
+        });
+    }*/
+    collection.find({a: 1}).toArray(function(err, docs) {
         if (err) {
             console.log(err);
             return;
         }
 
-        console.log('OK');
-        db.close();
-        return;
+        console.log(docs);
     });
+
+    console.log('Fin ');
+    return;
 }
